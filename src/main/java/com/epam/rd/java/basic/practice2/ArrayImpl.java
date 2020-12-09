@@ -106,7 +106,7 @@ public class ArrayImpl implements Array {
             if (numMoved > 0){
                 System.arraycopy(elementData, index+1, elementData, index, numMoved);
             }
-            elementData[--size] = null; // clear to let GC do its work
+            elementData[--size] = null;
 
         } else {
             throw new NoSuchElementException();
@@ -136,15 +136,15 @@ public class ArrayImpl implements Array {
 
     public static void main(String[] args) {
         ArrayImpl arrayImpl = new ArrayImpl();
-        arrayImpl.add("Something");
+        arrayImpl.add("something...");
         arrayImpl.clear();
-        arrayImpl.add("AnyObject");
+        arrayImpl.add("any object");
         arrayImpl.get(0);
-        arrayImpl.indexOf("SomeObject");
+        arrayImpl.indexOf("some Object");
         arrayImpl.iterator();
         arrayImpl.remove(0);
         arrayImpl.add("Object");
-        arrayImpl.set(0, "AnotherObject");
+        arrayImpl.set(0, "another object");
         arrayImpl.size();
     }
 
